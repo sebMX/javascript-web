@@ -4,7 +4,7 @@ console.log(h);
 var b = document.body; // La variable b contient l'objet body du DOM
 console.log(b);
 
-// Découvrir le type d'un nœud
+// Découvrir le type d'un noeud
 if (document.body.nodeType === document.ELEMENT_NODE) {
 	console.log("Body est un noeud élément");
 } else {
@@ -31,4 +31,3 @@ var h1 = document.body.childNodes[1];
 console.log(h1.parentNode);		// Affiche le noeud body
 
 console.log(document.parentNode);	// Affiche null : document n'a pas de noeud parent
-
