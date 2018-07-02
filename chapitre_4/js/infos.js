@@ -4,7 +4,7 @@ var styleElt = getComputedStyle(document.getElementById("contenu"));	// Récupè
 var listeElt = document.createElement("ul");	// Creation de l'élément ul
 var hauteurElt = document.createElement("li");	// Creation d'un élément li
 hauteurElt.textContent = "Hauteur : " + styleElt.height;	// Affiche la hauteur de l'élément id contenu
-var longueurElt = document.createElement("li");	// Creation d'un élément li
+var longueurElt = document.createElement("li");   // Creation d'un élément li
 longueurElt.textContent = "Longueur : " + styleElt.width;	// Affiche la longueur de l'élément id contenu
 
 
