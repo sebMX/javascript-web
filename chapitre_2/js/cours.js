@@ -1,4 +1,4 @@
-// Parcourez le DOM
+3// Parcourez le DOM
 
 // Sélectionner des éléments
 
@@ -73,7 +73,7 @@ console.log(document.querySelector("a").getAttribute("href"));
 // Certains attributs sont directement accessibles sous la forme de propriétés. 
 // C'est notamment le cas pour les attributs id, href et value.
 
-// L'identifiant de lma première liste
+// L'identifiant de la première liste
 console.log(document.querySelector("ul").id);
 
 // L'attribut href du premier lien
