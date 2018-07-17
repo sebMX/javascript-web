@@ -35,6 +35,71 @@ document.getElementById("bouton").addEventListener("click", function (e) {
 
 // Gestion des événements les plus courants
 
+// Appui sur une touche du clavier
+// Gestion de l'appui sur une touche du clavier produisant un caractère
+document.addEventListener("keypress", function(e) {
+	console.log("Vous avez appuyé sur la touche : " + String.fromCharCode(e.charCode));
+});
+
+
+// Affiche des informations sur un évènement
+function infosClavier(e) {
+	console.log("Evènement clavier : " + e.type + ", touche : " + e.keycode);
+}
+// Gestion de l'appui et du relachement d'une touche du clavier
+document.addEventListener("keydown", infosClavier);
+document.addEventListener("keyup", infosClavier);
+
+// Renvoie le nom du bouton souris à partir de son code
+function getBoutonSouris(code) {
+	var bouton = "inconnu";
+	switch (code) {
+		case 0: // 0 est le code du bouton gauche
+			bouton = "gauche";
+			break;
+		case 1: // 1 est le code du bouton milieu
+			bouton = "milieu";
+			break;
+		case 2: // 2 est le code du bouton droit
+			bouton = "droit";
+			break;
+	}
+	return bouton;
+}
+
+// Affiche des informations sur un évènement souris
+function infosSouris(e) {
+	console.log("Evènement souris : " + e.type + ", bouton " + 
+		getBoutonSouris(e.button) + ", X : " + e.clientX + ", Y : " + e.clientY);
+}
+
+// Gestion du clic souris
+document.addEventListener("click", infosSouris);
+
+// Gestion de l'appui et du relâchement d'un bouton de la souris
+document.addEventListener("mousedown", infosSouris);
+document.addEventListener("mouseup", infosSouris);
+
+
+// Fin du chargement de la page web
+
+// Gestion de la fin de chargement de la page web
+window.addEventListener("load", function() {
+	console.log("Page entièrement chargée");
+});
+
+// Fermeture de la page web
+
+// Gestion de la fermeture de la page web
+window.addEventListener("beforeunload", function(e) {
+	var message = "On est bien ici !";
+	e.returnValue = message;	// Provoque une demande de confirmation (standard)
+	return message;		// Provoque une demande de confirmation (certains navigateurs)
+});
+
+
+// Aller plus loin avec les événements
+
 // Comprendre la propagation des événements
 
 // Gestion du click sur le document
